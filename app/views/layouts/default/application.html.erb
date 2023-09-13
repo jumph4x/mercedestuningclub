@@ -2,11 +2,36 @@
 <html>
   <head>
     <title><%= current_spina_account.name %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <link rel="stylesheet" href="https://use.typekit.net/lfz6vwf.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+
     <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V8E0YPRZH3');
+    </script>
   </head>
   <body>
-    <%= render 'default/shared/navigation' %>
-    
-    <%= yield %>
+    <div class="tint tint--page">
+      <div class="info">
+        <div class="menu">
+          <%= render 'default/shared/navigation' %>
+        </div>
+      </div>
+      <div class="content">
+        <%= yield %>
+      </div>
+    </div>
+
   </body>
 </html>
