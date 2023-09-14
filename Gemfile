@@ -49,6 +49,9 @@ gem 'capistrano'
 # Use Sass to process CSS
 gem "sassc-rails"
 
+# Spina already uses Tailwind-CSS, we're using it on the frontend also hence first order dep
+gem "tailwindcss-rails", "~> 2.0"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

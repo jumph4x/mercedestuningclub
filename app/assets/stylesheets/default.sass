@@ -1,7 +1,7 @@
 html
-  background: asset-url('background/1.jpg') no-repeat center center fixed
-  background-size: cover
-  background-color: #222
+  //background: asset-url('background/1.jpg') no-repeat center center fixed
+  //background-size: cover
+  //background-color: #222
 
 body
   font-family: proxima-nova,sans-serif
@@ -14,22 +14,8 @@ body
 a
   color: white
 
-.menu
-  a
-    text-decoration: none
-    &:hover
-      text-decoration: underline
-
 .tint
-  margin: 25rem auto 0
-  width: 70%
-  @media (max-height: 640px)
-    margin: 10rem auto 0
-  @media (max-width: 640px)
-    width: 90%
-
-  &--page
-    margin: 0 auto
+  
 
 h1,h2
   font-weight: 100
@@ -43,10 +29,16 @@ h2
   font-size: 1rem
   margin-left: -0.7rem
 
-.menu
+nav
   a
+    text-decoration: none
     text-transform: uppercase
     display: block
+    &:hover
+      text-decoration: underline
+  ul
+    list-style-type: none
+    margin-left: 0
 
 
 ul, ol
@@ -60,12 +52,14 @@ ul
 
 
 .content
+
+
+.footer
   margin-top: 2rem
   width: 50%
-  max-width: 512px
-  @media (max-width: 640px)
-    width: 100%
-
+  color: #999
+  a
+    color: #ccc
 
 .video
   padding-bottom: 60%
