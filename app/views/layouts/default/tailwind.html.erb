@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-<html style="background-image: url('<%= random_bg -%>')">
+<html>
   <head>
     <title><%= current_spina_account.name %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link rel="stylesheet" href="https://use.typekit.net/lfz6vwf.css">
-    
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <%= javascript_importmap_tags %>
     <script defer src="/javascript/enhancements.js"></script>
-
-    <meta name="theme-color" content="#222222">
-    <meta name="msapplication-navbutton-color" content="#222222">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -24,18 +19,18 @@
 
   </head>
   <body>
-    <div class="tint tint--page">
-      <div class="site-name">
-        <%= current_spina_account.name -%>
-      </div>
+    <div class="tint max-w-6xl mx-auto bg-gray-100 shadow-2xl">
+      <a class="text-white text-4xl top-5 left-4 cursor-pointer md:hidden" data-sidebar-button>
+        <i class="bi bi-filter-left px-2 bg-gray-900 rounded-md">menu</i>
+      </a>
       <div class="info">
         <%= render 'default/shared/navigation' %>
       </div>
-      <div class="content">
+      <div class="content ml-[250px]">
         <%= yield %>
       </div>
 
-      <div class="footer">
+      <div class="footer ml-[250px]">
         In partnership with <a href="https://www.fcpeuro.com/?utm_source=mercedestuning.club&utm_medium=referral&utm_campaign=mercedes+tuning+club">FCP Euro</a>, the trusted quality European car parts people.
         
         <br/>
