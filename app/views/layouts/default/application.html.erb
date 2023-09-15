@@ -19,8 +19,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
+    <%- unless Rails.env.production? -%>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+      </script>
+    <%- end -%>
 
   </head>
   <body>
