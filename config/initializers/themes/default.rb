@@ -61,5 +61,5 @@ Spina::Theme.register do |theme|
   theme.plugins = []
 
   # Embeds (optional)
-  theme.embeds = []
+  theme.embeds = %w(button youtube)
 end
