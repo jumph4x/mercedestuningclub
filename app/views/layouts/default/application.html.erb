@@ -19,7 +19,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%- unless Rails.env.production? -%>
+    <%- if Rails.env.production? -%>
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
       <script>
