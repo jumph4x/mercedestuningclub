@@ -302,6 +302,7 @@ DEPENDENCIES
   capistrano
   capybara
   debug
+  ffi
   importmap-rails
   jbuilder
   pg (~> 1.1)
