@@ -9,13 +9,19 @@
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <%= javascript_importmap_tags %>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script defer src="/javascript/enhancements.js"></script>
 
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
+    <%- if Rails.env.production? -%>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-V8E0YPRZH3"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+      </script>
+    <%- end -%>
 
   </head>
   <body>
