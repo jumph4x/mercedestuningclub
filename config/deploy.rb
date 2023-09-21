@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.3"
 
-set :rvm_ruby_version, '3.2.2'
+set :rvm_ruby_version, '3.1.4'
 
 set :application, "mercedes_tuning_club"
 set :repo_url, "git@github.com:jumph4x/mercedestuningclub.git"
