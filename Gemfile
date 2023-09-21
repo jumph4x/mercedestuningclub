@@ -45,6 +45,10 @@ gem "bootsnap", require: false
 
 # Capistrano for deployment things to Digital Ocean
 gem 'capistrano'
+gem 'capistrano-rvm'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+gem 'capistrano-rails'
 
 # Use Sass to process CSS
 gem "sassc-rails"
